@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Webpage</title>
+	  <link rel="icon" href="./images/developer-icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav>
+				<div class="logo-and-name">
+					<img class="developer-logo" src="./images/developer-icon.png">
+
+					<h1>Rent a Developer</h1>
+				</div>
+
+				<div class="nav-right-section">
+					<button id="toggle-light-btn" type="button" data-theme-toggle><i class="fa fa-sun-o"></i></button>
+					<button id="toggle-dark-btn" type="button" data-theme-toggle><i class="fa fa-moon-o"></i></button>
+
+					<ul class="nav-links">
+						<li><a href="#about-us">About Us</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+
+					<span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<h2>About</h2>
+				<div class="row">
+					<div class='column'>
+						<p>In a world becoming increasingly dominated by web services,
+							finding the appropriate developer is a prerequisite for
+							climbing the ladder of success in a competitive economy.
+							<br><br>
+							Rent a developer was founded for this precise purpose.
+							Our team has demonstrated their ability to write
+							maintainable code that adheres to the best practices.
+							<br><br>
+							Effectively communicating technical concepts to colleagues
+							from non-technical fields is an asset that our employees
+							consistently make a habit of.
+							<br><br>
+							Hence, we are honoured to provide you with the talent
+							necessary to turn your idea into actuality!
+						</p>
+					</div>
+
+					<div class='column'>
+						<img src="./images/developers.jpeg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Projects</h2>
+
+				<div class='row'>
+					<div class='column'>
+						<img src="./images/travel-app.png">
+						<h3>Embarking on a Holiday</h3>
+
+						<p>Travel booking app with intuitive navigation
+							 in addition to secure payment options.</p>
+					</div>
+
+					<div class='column'>
+						<img src="./images/vegetables-app.jpg">
+						<h3>Ordering Fresh Produce</h3>
+						<p>E-commerce market for quickly purchasing
+							 organic fruits and vegetables.</p>
+					</div>
+				</div>
+
+				<div class='row'>
+					<div class='column'>
+						<img src="./images/poverty-app.jpg">
+						<h3 class="project-title">Eradicating Destitution</h3>
+						<p class="project-description">
+							Charity fund with a clear call to action and story-telling
+							to form an emotional connection.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Contact Us</h2>
+				<p>Have any questions or inquiries? Fill out the form below,
+					 and we will get back to you as soon as possible.
+				</p>
+
+				<form id="inquiries" onsubmit="showModal(event)">
+					<p>
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name"
+							placeholder="Input your name..." required>
+					</p>
+
+					<p>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" 
+							max_length=100 placeholder="Input your email..." required>
+					</p>
+
+					<p>
+						<label for="message">Message</label>
+						<textarea id="message" max_length=500 name="message"
+							placeholder="Write your message here..." required rows="8" required></textarea>
+					</p>
+
+					<button id="send" class="open-modal-btn">Send</button>
+				</form>
+			</div>
+		</section>
+
+    <div id="modal-dialog">
+			<div class="modal-content">
+				<h2>Thank you!</h2>
+				<p>Your inquiry has been received and we will
+					 assist you as quickly as possible.</p>
+				<button id="close-modal-btn" class="close-modal-btn">Proceed</button>
+			</div>
+    </div>
+	</main>
+
+	<footer>
+			<p>&copy; 2024 Rent a Developer. All Rights Reserved.</p>
+
+			<h3>Follow Us</h3>
+
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>
